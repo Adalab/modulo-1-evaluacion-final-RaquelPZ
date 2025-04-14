@@ -1,0 +1,85 @@
+// @use 'core/reset';
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+// ESTO ES EL ENCABEZADO (HEADER)
+
+header{
+    // background-image: url(/public/images/cover.jpeg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color: blue;
+    padding-inline: 20%;
+    padding-top: 400px;
+}
+    .boton_1 {
+        background-color: orangered;
+        height: 45px;
+        width: 45px;
+        border-radius: 50px;
+    }
+
+
+    // ESTO ES LA PRIMERA PARTE (MAIN)
+
+main{
+    background-color: blanchedalmond;
+    padding: 12px;
+}
+
+
+    // ESTO ES LA SEGUNDA PARTE (SECION)
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    width: 100%;
+    padding: 12px;
+}
+    .bloque {
+        background-color: cyan;
+        width: 30%;
+    }
+    .boton_max {
+        background-color: orangered;
+        height: 45px;
+        width: 75%;
+        border-radius: 50px;
+    }
+
+
+        // ESTO ES EL FOOTER (FOOTER)
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+    background-color: black;
+    width: 100%;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    .boton_2 {
+        background-color: orangered;
+        height: 45px;
+        width: 45px;
+        border-radius: 50px;
+    }
