@@ -1,10 +1,52 @@
-// @use 'core/reset';
+$color0: #ffffff;
+$color1:#f26002;
+$color2: #304268;
+$color3:#0271bc;
+$color4:#8ccbea;
+$tipo1: arial;
+$tipo2: serif;
+
+// ESTO ES MAS UNIVERSAL
+
 body{
+    font-family: $tipo1;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding: 0;
+    width: 100%;
 }
+    h1{
+        font-family: $tipo2;
+        font-size: 3.5em;
+        line-height: 0;
+    }
+    h2{
+        font-family: $tipo2;
+        font-size: 2.25em;
+        line-height: 1.25em;
+    }
+    h3{
+        font-family: $tipo2;
+        font-size: 1.5em;
+        line-height: 0;
+    }
+    h4{
+        color: $color4;
+        font-size: 1em;
+        line-height: 0;
+    }
+    p {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+    a{
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+
+
 
 
 // ESTO ES EL ENCABEZADO (HEADER)
@@ -14,29 +56,48 @@ header{
     // background-repeat: no-repeat;
     // background-size: cover;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 600px;
-    background-color: blue;
-    padding-inline: 20%;
+    height: 400px;
+    background-color: $color2;
     padding-top: 400px;
+    color:#ffffff;
+    p{font-size: 1.5em;}
 }
     .boton_1 {
-        background-color: orangered;
+        background-color: $color0;
         height: 45px;
         width: 45px;
         border-radius: 50px;
+        margin-top: 50px;
     }
-
 
     // ESTO ES LA PRIMERA PARTE (MAIN)
 
 main{
-    background-color: blanchedalmond;
-    padding: 12px;
+    background-color: $color0;
+    padding: 15px;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    p{color: $color2;}
 }
-
+    .boton_go {
+        background-color: $color0;
+        border-color: $color1;
+        height: 45px;
+        width: 85px;
+        border-radius: 50px;
+        border: solid;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:$color1;
+        p{color: $color1 ;}
+    }
 
     // ESTO ES LA SEGUNDA PARTE (SECION)
 
@@ -44,21 +105,40 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    justify-content: center;
+    background-color: $color4;
     width: 100%;
     padding: 12px;
+    gap: 50px;
 }
     .bloque {
-        background-color: cyan;
-        width: 30%;
+        width: 40%;
+        border: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .boton_max {
-        background-color: orangered;
+        background-color: $color1;
+        color: $color0;
         height: 45px;
         width: 75%;
         border-radius: 50px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
     }
-
+    .boton_2 {
+        background-color: $color0;
+        height: 45px;
+        width: 45px;
+        border-radius: 50px;
+        position: absolute;
+        margin-top: 900px;
+    }
 
         // ESTO ES EL FOOTER (FOOTER)
 
@@ -66,20 +146,52 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: azure;
-    background-color: black;
+    color: $color0;
+    background-color: $color2;
     width: 100%;
-
+    padding: 20px;
+    padding-top: 50px;
+    gap: 30px;
     div{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        a{margin: 8px;}
+        p{line-height: 0;}
     }
 }
 
-    .boton_2 {
-        background-color: orangered;
-        height: 45px;
-        width: 45px;
-        border-radius: 50px;
+// PARA TABLET
+
+@media all and (min-width: 768px) {
+    h1{font-size: 5em;}
+    header{height: 500px; padding-top: 500px;}
+    main {padding-inline: 50px;}
+    section{padding-inline: 50px;}
+    .boton_max{width: 30%;}
+    footer{
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-around;
+            div{align-items: start;}
+            .final_0{order: 0;}
+            .final_1{order: 1;}
+            .final_2{order: 2;}
     }
+}
+@media all and (min-width: 1024px) {
+    header {background-color: $color1;}
+    h1{font-size: 7em;}
+    main{width: 60%;}
+    .boton_go{ width: 150px;
+        &:hover{background-color: $color4;}
+    }
+    .boton_max{
+        &:hover {background-color: $color2;}
+    }
+    footer{justify-content: center;
+        gap:100px;}
+}
+
+    // @use 'core/reset';
