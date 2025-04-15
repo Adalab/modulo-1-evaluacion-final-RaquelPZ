@@ -30,33 +30,33 @@ body{
     h3{
         font-family: $tipo2;
         font-size: 1.5em;
-        line-height: 0;
+        line-height: 1em;
     }
     h4{
         color: $color4;
         font-size: 1em;
-        line-height: 0;
     }
     p {
         font-size: 1.25em;
         line-height: 1.5em;
     }
     a{
+        text-decoration: none;
+        color: $color0 ;
         font-size: 1.25em;
         line-height: 1.5em;
+        &:hover{ color: $color1 }
     }
-
-
 
 
 // ESTO ES EL ENCABEZADO (HEADER)
 
 header{
-    // background-image: url(/public/images/cover.jpeg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    background-image: url(/public/images/cover.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -67,6 +67,7 @@ header{
     p{font-size: 1.5em;}
 }
     .boton_1 {
+        background-image: url(/public/images/ico-arrow.svg);
         background-color: $color0;
         height: 45px;
         width: 45px;
@@ -97,6 +98,7 @@ main{
         align-items: center;
         color:$color1;
         p{color: $color1 ;}
+        &:hover{background-color: $color1; color: $color0; }
     }
 
     // ESTO ES LA SEGUNDA PARTE (SECION)
@@ -108,37 +110,38 @@ section {
     justify-content: center;
     background-color: $color4;
     width: 100%;
-    padding: 12px;
+    padding-block: 12px;
     gap: 50px;
 }
-    .bloque {
-        width: 40%;
-        border: solid;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .all_box{
+        display: grid;
+        width: 300px;
     }
-    .boton_max {
-        background-color: $color1;
-        color: $color0;
-        height: 45px;
-        width: 75%;
-        border-radius: 50px;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 60px;
-    }
-    .boton_2 {
-        background-color: $color0;
-        height: 45px;
-        width: 45px;
-        border-radius: 50px;
-        position: absolute;
-        margin-top: 900px;
-    }
+        .box {
+            text-align: center;
+            margin-inline: 5px;
+        }
+        .boton_max {
+            background-color: $color1;
+            color: $color0;
+            height: 45px;
+            width: 240px;
+            border-radius: 50px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+            &:hover {background-color: $color0; color:$color1;}
+        }
+        .boton_2 {
+            background-color: $color0;
+            height: 45px;
+            width: 45px;
+            border-radius: 50px;
+            position: absolute;
+            margin-top: 800px;
+        }
 
         // ESTO ES EL FOOTER (FOOTER)
 
@@ -166,10 +169,20 @@ footer{
 
 @media all and (min-width: 768px) {
     h1{font-size: 5em;}
-    header{height: 500px; padding-top: 500px;}
+    h2{font-size: 2.6em;}
+    h3{font-size: 1.8em;}
+    p{font-size: 1.3em;}
+    header{height: 500px; padding-top: 300px;}
     main {padding-inline: 50px;}
     section{padding-inline: 50px;}
     .boton_max{width: 30%;}
+    .all_box{
+        width: 93%;
+        grid-template-columns: auto auto auto;
+    }
+    .boton_2{
+        margin-top: 520px;
+    }
     footer{
         flex-direction: row;
         align-items: start;
@@ -180,18 +193,16 @@ footer{
             .final_2{order: 2;}
     }
 }
+
+// PARA ESCRITORIO
+
 @media all and (min-width: 1024px) {
-    header {background-color: $color1;}
+    header {height: 700px; padding-top: 200px;}
     h1{font-size: 7em;}
     main{width: 60%;}
-    .boton_go{ width: 150px;
-        &:hover{background-color: $color4;}
-    }
-    .boton_max{
-        &:hover {background-color: $color2;}
-    }
-    footer{justify-content: center;
-        gap:100px;}
+    .boton_go{ width: 150px;}
+    .boton_2{margin-top: 500px;}
+    footer{justify-content: center; gap:100px;}
 }
 
     // @use 'core/reset';
