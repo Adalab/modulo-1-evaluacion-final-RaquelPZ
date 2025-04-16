@@ -3,8 +3,8 @@ $color1:#f26002;
 $color2: #304268;
 $color3:#0271bc;
 $color4:#8ccbea;
-$tipo1: arial;
-$tipo2: serif;
+$tipo1: "Roboto";
+$tipo2: "RobotoSlab";
 
 // ESTO ES MAS UNIVERSAL
 
@@ -22,6 +22,7 @@ body{
         font-family: $tipo2;
         font-size: 3.5em;
         line-height: 0;
+        // transition: 1s;
     }
     h2{
         font-family: $tipo2;
@@ -53,9 +54,9 @@ body{
 // ESTO ES EL ENCABEZADO (HEADER)
 
 header{
-    background-image: url(/public/images/cover.jpeg);
+    background-image: url(../images/cover.jpeg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -68,12 +69,19 @@ header{
     p{font-size: 1.5em;}
 }
     .boton_1 {
-        background-image: url(/public/images/ico-arrow.svg);
+        background-image: url(../images/ico-scroll-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
         background-color: $color0;
         height: 45px;
         width: 45px;
         border-radius: 50px;
         margin-top: 50px;
+        &:hover{
+            background-color: $color1;
+            background-image: none;
+            transition: 0.75s;
+        }
     }
 
     // ESTO ES LA PRIMERA PARTE (MAIN)
@@ -99,7 +107,10 @@ main{
         align-items: center;
         color:$color1;
         p{color: $color1 ;}
-        &:hover{background-color: $color1; color: $color0; }
+        &:hover{
+            background-color: $color2;
+            transition: 0.75s;
+        }
     }
 
     // ESTO ES LA SEGUNDA PARTE (SECION)
@@ -133,15 +144,27 @@ section {
             flex-direction: column;
             align-items: center;
             margin-bottom: 60px;
-            &:hover {background-color: $color0; color:$color1;}
+            &:hover {
+                background-color: $color0;
+                color:$color1;
+                transition: 0.75s;
+            }
         }
         .boton_2 {
+            background-image: url(../images/ico-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
             background-color: $color0;
             height: 45px;
             width: 45px;
             border-radius: 50px;
             position: absolute;
             margin-top: 800px;
+            &:hover{
+                background-color: $color1;
+                background-image: none;
+                transition: 0.75s;
+            }
         }
 
         // ESTO ES EL FOOTER (FOOTER)
