@@ -24,13 +24,16 @@ main{
     h1{
         font-family: $tipo2;
         font-size: 3.5em;
+        text-shadow: 0px 0.5px 0.5px $color2;
         line-height: 0;
-        // transition: 1s;
+        opacity: 0;
+        animation: hello 2s forwards;
     }
-    h2{
-        font-family: $tipo2;
-        font-size: 2.25em;
-        line-height: 1.25em;
+        @keyframes hello {to{opacity: 99%;}}
+        h2{
+            font-family: $tipo2;
+            font-size: 2.25em;
+            line-height: 1.25em;
     }
     h3{
         font-family: $tipo2;
@@ -65,8 +68,7 @@ main{
     height: 45px;
     width: 45px;
     &:hover{
-        background-color: $color0;
-        background-image: none;
+        background-color: $color1;
         transition: 0.75s;
     }
 }
