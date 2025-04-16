@@ -31,10 +31,10 @@ main{
         animation: hello 2s forwards;
     }
         @keyframes hello {to{opacity: 99%;}}
-        h2{
-            font-family: $tipo2;
-            font-size: 1.9em;
-            line-height: 1.25em;
+    h2{
+        font-family: $tipo2;
+        font-size: 1.8em;
+        line-height: 1.25em;
     }
     h3{
         font-family: $tipo2;
