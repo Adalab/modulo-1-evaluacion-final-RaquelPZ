@@ -96,12 +96,14 @@ header{
         width: 45px;
         border-radius: 50px;
         margin-top: 50px;
+        animation: hello2 1s ease-out forwards;
         &:hover{
             background-color: $color1;
             background-image: none;
             transition: 0.75s;
         }
     }
+    @keyframes hello2 {to{margin-top:20px}}
 
     // ESTO ES LA PRIMERA PARTE (ARTICLE)
 
